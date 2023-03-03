@@ -35,3 +35,38 @@ h4 {
   line-height: 19px;
   color: #4b6a9b;
 }
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  color: #2b3442;
+}
+
+.switch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #4b6a9b;
+}
+
+.switch:hover {
+  color: #222731;
+}
+
+.flex-container-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-jcsb {
+  display: flex;
+  justify-content: space-between;
+}
