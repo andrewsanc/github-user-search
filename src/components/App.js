@@ -3,7 +3,7 @@ import Header from "./Header";
 import Search from "./Search";
 
 export default function App() {
-  const [search, setSearch] = useState("");
+  const [searchUser, setSearchUser] = useState("");
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () =>
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className='app' data-theme={theme}>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Search />
+      <Search searchUser={searchUser} setSearchUser={setSearchUser} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function Header(props) {
   const { theme, toggleTheme } = props;
@@ -10,7 +10,7 @@ export default function Header(props) {
       <div className='flex-jcsb'>
         <div className='switch' onClick={toggleTheme}>
           <p>{theme}</p>
-          <FaMoon />
+          {theme === "light" ? <FaSun /> : <FaMoon />}
         </div>
       </div>
     </div>
