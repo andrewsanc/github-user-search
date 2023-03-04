@@ -3,6 +3,8 @@
   --text-primary: #2b3442;
   --text-secondary: #4b6a9b;
   --switch-primary: #4b6a9b;
+  --btn-primary: #fff;
+  --input-primary: #fff;
   --accent: #0079ff;
   --hover: #222731;
 }
@@ -12,8 +14,27 @@
   --text-primary: #fff;
   --text-secondary: #4b6a9b;
   --switch-primary: #fff;
+  --input-primary: #1e2a47;
   --accent: #0079ff;
   --hover: #4b6a9b;
+}
+
+input[type="search"] {
+  border: none;
+  font-family: inherit;
+  width: 100%;
+  color: var(--text-primary);
+  background-color: var(--input-primary);
+  transition: 0.5s;
+}
+
+::placeholder {
+  color: var(--text-primary);
+  transition: 0.5s;
+}
+
+input:focus {
+  outline: none;
 }
 
 body {
@@ -28,6 +49,7 @@ body {
 
 .app {
   background-color: var(--background);
+  height: 100vh;
   margin: 0;
   font-family: "Space Mono";
   font-style: normal;
@@ -70,11 +92,22 @@ h4 {
 
 button {
   border: none;
+  font-weight: 700;
   font-family: inherit;
-  font-size: 1em;
+  font-size: 16px;
+  line-height: 24px;
   cursor: pointer;
-  color: var(--text-primary);
-  transition: all 0.5s;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--btn-primary);
+}
+
+.btn-primary {
+  background-color: #0079ff;
+}
+
+.btn-primary:hover {
+  background-color: #60abff;
 }
 
 .switch {
@@ -90,7 +123,7 @@ button {
   color: var(--hover);
 }
 
-.flex-container-row {
+.flex-row {
   display: flex;
   align-items: center;
 }
@@ -107,6 +140,24 @@ button {
   justify-content: space-between;
 }
 
+.align-end {
+  align-self: flex-end;
+}
+
 .mx {
   margin: 0px 10px 0px 10px;
+}
+
+.search-input {
+  background-color: var(--input-primary);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.fgrow {
+  flex-grow: 1;
 }

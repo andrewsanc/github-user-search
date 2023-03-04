@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
+import Search from "./Search";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <div className='app' data-theme={theme}>
       <Header theme={theme} toggleTheme={toggleTheme} />
+      <Search />
     </div>
   );
 }
