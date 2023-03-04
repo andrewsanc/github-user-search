@@ -1,39 +1,71 @@
+:root {
+  --background: #f6f8ff;
+  --text-primary: #2b3442;
+  --text-secondary: #4b6a9b;
+  --switch-primary: #4b6a9b;
+  --accent: #0079ff;
+  --hover: #222731;
+}
+
+[data-theme="dark"] {
+  --background: #141d2f;
+  --text-primary: #fff;
+  --text-secondary: #4b6a9b;
+  --switch-primary: #fff;
+  --accent: #0079ff;
+  --hover: #4b6a9b;
+}
+
 body {
+  background-color: var(--background);
   margin: 0;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
-  color: #2b3442;
+}
+
+.app {
+  background-color: var(--background);
+  margin: 0;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  transition: all 0.5s;
 }
 
 h1 {
   font-weight: 700;
   font-size: 26px;
   line-height: 38px;
-  color: #2b3442;
+  color: var(--text-primary);
+  transition: all 0.5s;
 }
 
 h2 {
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  color: #2b3442;
+  color: var(--text-primary);
+  transition: all 0.5s;
 }
 
 h3 {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #0079ff;
+  color: var(--accent);
 }
 
 h4 {
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #4b6a9b;
+  color: var(--text-secondary);
+  transition: all 0.5s;
 }
 
 button {
@@ -41,18 +73,21 @@ button {
   font-family: inherit;
   font-size: 1em;
   cursor: pointer;
-  color: #2b3442;
+  color: var(--text-primary);
+  transition: all 0.5s;
 }
 
 .switch {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #4b6a9b;
+  color: var(--switch-primary);
+  transition: all 0.5s;
+  gap: 10px;
 }
 
 .switch:hover {
-  color: #222731;
+  color: var(--hover);
 }
 
 .flex-container-row {
@@ -68,5 +103,10 @@ button {
 
 .flex-jcsb {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.mx {
+  margin: 0px 10px 0px 10px;
 }

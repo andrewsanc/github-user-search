@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
 
-export default function Header() {
-  const [toggleDarkMode, setToggleDarkMode] = useState(false);
+export default function Header(props) {
+  const { theme, toggleTheme } = props;
 
   return (
-    <div className='flex-container-row'>
+    <div className='flex-jcsb mx'>
       <h2>devfinder</h2>
-      <div className='flex-container-row flex-jcsb'>
-        <div className='switch'>
-          <p>{toggleDarkMode ? "Light" : "Dark"}</p>
+      <div className='flex-jcsb'>
+        <div className='switch' onClick={toggleTheme}>
+          <p>{theme}</p>
           <FaMoon />
         </div>
       </div>
